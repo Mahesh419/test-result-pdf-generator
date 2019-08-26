@@ -15,7 +15,7 @@ module.exports = {
            if (err) throw err;
            const params = {
                Bucket: 'coders-glory-result-pdf-bucket', 
-               Key: 'Test_result.pdf',
+               Key: `Test_result_${new Date().getTime()}.pdf`,
                Body: data
            };
            s3.upload(params, function(s3Err, data) {
