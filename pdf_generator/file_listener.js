@@ -2,6 +2,7 @@ const fl = require('file-listener');
 const fs = require('fs');
 const xml2js = require('xml2js');
 const PDFDocument = require('pdfkit');
+const pdf2s3 = require('./pdf2s3');
 
 var parser = new xml2js.Parser();
 
@@ -25,8 +26,10 @@ watch('../test', { recursive: true }, function(evt, name) {
         summary = result.testsuite.$;
         test_cases = result.testsuite.testcase;
 
-        if(fs.existsSync('./output.pdf')){
-            fs.unlinkSync('output.pdf');
+        let fileName = 'output.pdf';
+
+        if(fs.existsSync(`./${fileName}`)){
+            fs.unlinkSync(fileName);
         }
         // console.log(summary);
         // console.log(test_cases);
@@ -36,8 +39,14 @@ watch('../test', { recursive: true }, function(evt, name) {
         generateChallengeInformation(doc, summary);
         generateResultsTable(doc, test_cases);
         
-        doc.pipe(fs.createWriteStream('output.pdf'));
+        writeStream = fs.createWriteStream(fileName)
+        doc.pipe(writeStream);
         doc.end();
+
+        writeStream.on('finish', function () {
+          pdf2s3.uploadFile(fileName);
+        });
+
       });
   });
 });
