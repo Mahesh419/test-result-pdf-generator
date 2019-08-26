@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<testsuite name="Chrome 76.0.3809 (Windows 10.0.0)" package="" timestamp="2019-08-23T12:45:17" id="0" hostname="MaheshSa" tests="5" errors="0" failures="0" time="3.11">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36"/>
+  </properties>
+  <testcase name="ScoreService leaderboard should be sorted by marks descending" time="1.146" classname="ScoreService"/>
+  <testcase name="ScoreService should be able to add score item" time="0.03" classname="ScoreService"/>
+  <testcase name="ScoreService should be created" time="0.016" classname="ScoreService"/>
+  <testcase name="AppComponent should create the app" time="1.088" classname="AppComponent"/>
+  <testcase name="LeaderboardComponent should create" time="0.83" classname="LeaderboardComponent"/>
+  <system-out>
+    <![CDATA[
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<testsuite name="Chrome 76.0.3809 (Windows 10.0.0)" package="" timestamp="2019-08-23T07:17:35" id="0" hostname="MaheshSa" tests="5" errors="0" failures="1" time="0.375">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36"/>
+  </properties>
+  <testcase name="ScoreService leaderboard should be sorted by marks descending" time="0.055" classname="ScoreService"/>
+  <testcase name="ScoreService should be created" time="0.012" classname="ScoreService"/>
+  <testcase name="ScoreService should be able to add score item" time="0.144" classname="ScoreService">
+    <failure type="">Error: Expected 100 to equal 1.
+    at &lt;Jasmine&gt;
+    at UserContext.&lt;anonymous&gt; (http://localhost:9876/_karma_webpack_/webpack:/src/app/services/score.service.spec.ts:21:28)
+    at ZoneDelegate.invoke (http://localhost:9876/_karma_webpack_/webpack:/node_modules/zone.js/dist/zone-evergreen.js:359:1)
+    at ProxyZoneSpec.onInvoke (http://localhost:9876/_karma_webpack_/webpack:/node_modules/zone.js/dist/zone-testing.js:308:1)
+</failure>
+  </testcase>
+  <testcase name="AppComponent should create the app" time="0.084" classname="AppComponent"/>
+  <testcase name="LeaderboardComponent should create" time="0.08" classname="LeaderboardComponent"/>
+  <system-out>
+    <![CDATA[
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>
